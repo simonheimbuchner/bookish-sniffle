@@ -1,0 +1,18 @@
+// includes
+
+// base
+@import 'base/normalize';
+@import 'base/customreset';
+@import 'base/colors';
+@import 'base/typography';
+@import 'base/breakpoints';
+@import 'base/notransition';
+
+//components
+@import 'components/layout';
+  //main segment
+  @import 'components/ms-main-segment';
+  @import 'components/ms-gallery';
+  @import 'components/ms-spacing';
+
+@import 'components/resize-overlay';

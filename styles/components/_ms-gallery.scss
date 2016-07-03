@@ -1,0 +1,126 @@
+// main: ../main.scss
+
+// styles for collapsed & expanded  ------------------------------------------------------------------------------------------------
+main section[data-purpose=gallery] {
+  cursor: pointer;
+
+  // container for expanded images
+  .ms-content-container {
+    position: absolute;
+    background-color: #e8e8e8;
+    z-index: 1;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+    }
+  }
+
+
+  // container for collapsed images
+  figure.ms-gallery-thumb {
+    z-index: -1;
+    div {
+      background-size: cover;
+    }
+    figcaption {
+      position: absolute;
+      left: calc(50vw + 50px);
+      margin-top: 100px;
+    }
+
+    .ms-gt-left, .ms-gt-right {
+      position: absolute;
+      @include l {
+        width: 380px;
+        height: 380px;
+      }
+      @include m {
+        width: calc(50vw + 30px);
+        height: calc(50vw + 30px);
+      }
+    }
+  }
+
+}
+
+// specific styles for collapsed state  ------------------------------------------------------------------------------------------------
+main section[data-purpose=gallery][data-state=collapsed] {
+  .ms-content-container {
+    pointer-events: none;
+    height: 380px;
+    left: calc(50% - (700px / 2) );
+    top: calc((380px / 2) - 90px);
+    width: 700px;
+    opacity: 0;
+    transition: opacity .5s .7s, left .5s .3s, top .5s .3s, height .5s .3s, width .5s .3s;
+    img {
+      margin-top: 100px;
+      opacity: 0;
+      transition: margin .6s, opacity .3s;
+    }
+  }
+  .ms-gallery-thumb {
+    .ms-gt-left, .ms-gt-right {
+      transition: margin .5s 1s;
+    }
+    .ms-gt-left {
+      @include l {
+        margin-left: 0;
+        margin-top: calc((573px - 380px) / 2 + 30px);
+      }
+      @include m {
+        left: 0;
+        margin-top: calc((100% / 3 * 2) - (50vw + 30px));
+      }
+    }
+    .ms-gt-right {
+      @include l {
+        margin-top: calc((573px - 380px) / 2 - 30px);
+        margin-left: calc(700px - 380px);
+      }
+      @include m {
+        right: 0;
+      }
+    }
+  }
+
+
+}
+
+// specific styles for expanded state  ------------------------------------------------------------------------------------------------
+main section[data-purpose=gallery][data-state=expanded] {
+  .ms-content-container {
+    opacity: 1;
+    left: 0;
+    top: 0;
+    transition: opacity .5s .4s, left .7s .8s, top .7s .8s, height .7s .8s, width .7s .8s;
+    img {
+      transition: margin .5s 1.4s, opacity .3s 1.4s;
+    }
+  }
+
+  .ms-gallery-thumb {
+    .ms-gt-left, .ms-gt-right {
+      transition: margin .5s;
+    }
+    .ms-gt-left {
+      @include l {
+        margin-top: calc((380px / 2) - 90px) !important;
+      }
+      @include m {
+
+      }
+    }
+    .ms-gt-right {
+      @include l {
+        margin-top: calc((380px / 2) - 90px) !important;
+        margin-left: calc(700px - 380px);
+      }
+      @include m {
+
+      }
+    }
+  }
+
+}

@@ -1,8 +1,17 @@
-requirejs(['./modules/msObject', './vendor/getJSONFromFile'], function() {
+define(['lib/getJSONFromFile',
+          'modules/global-eventlisteners',
+          'modules/mainpage/mso-init-functions',
+          'modules/mainpage/mso-modules/mso-wrapper',
+          'modules/mainpage/mso-modules/mso-head',
+          'modules/mainpage/mso-modules/mso-thumbnail',
+          'modules/mainpage/mso-modules/mso-content-container',
+          'modules/mainpage/mso-modules/mso-content-gallery',
+          'modules/mainpage/mso-modules/mso-content-video',
+          ], function() {
 
 
-  // JSON call
-  getJSONFromFile('resources/json/msObjects_neu.json', function(output) {
+  // JSON call mainpage
+  getJSONFromFile('resources/json/pagecontents.json', function(output) {
 
     // PREP ---------------------------------------------------------------------------------------------------------
 
@@ -43,19 +52,6 @@ requirejs(['./modules/msObject', './vendor/getJSONFromFile'], function() {
     }
 
   });
-});
 
 
-
-function initMsoGallery(i, defaultProjPath, defaultThumbPath, projType, projName, projCreationDate, projPathToData, projHeadTitle, projHeadTitle, projHeadDesc, projHeadTagDisplay, projHeadTagHref, projThumbnailImages, projImages) {
-  var mso_gallery_i = i + 'gallery';
-  mso_gallery_i = new msoWrapper(i, projName, projType, projCreationDate, projPathToData);
-  mso_gallery_i = new msoHead(i, projHeadTitle, projHeadDesc, projHeadTagDisplay, projHeadTagHref);
-  mso_gallery_i = new msoThumbnail(i, defaultProjPath, defaultThumbPath, projType, projCreationDate, projThumbnailImages);
-  mso_gallery_i = new msoContentContainer(i);
-  mso_gallery_i = new msoContentGallery(i, defaultProjPath, projPathToData, projCreationDate, projImages);
-}
-
-function initMsoImage() {
-
-}
+}); //requirejs ending brackets
