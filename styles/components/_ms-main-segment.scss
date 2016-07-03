@@ -1,10 +1,5 @@
 // main: ../main.scss
-main section[data-purpose=image] {
-  .ms-img {
-    background-size: cover;
-  }
-}
-
-main section[data-role="main-segment"] {
+main section[data-role=main-segment] {
   position: relative;
+  cursor: pointer;
 }

@@ -1,5 +1,5 @@
 // main: ../main.scss
-.segment-spacing-vertical {
+hr.segment-spacing-vertical {
   display: block;
   margin: 0 auto;
   @include l {
@@ -15,7 +15,7 @@
     height: 120px;
   }
 }
-.segment-spacing-vertical::before {
+hr.segment-spacing-vertical::before {
   content: '';
   position: absolute;
   height: 0.1em;
@@ -32,4 +32,9 @@
     width: 140px;
     margin-top: calc(120px / 2 - .05em);
   }
+}
+
+// last hr in main segment is invisible, segment itself is still displayed
+main hr.segment-spacing-vertical:nth-last-child(1)::before {
+  display: none;
 }

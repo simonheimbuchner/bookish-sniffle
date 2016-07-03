@@ -3,18 +3,23 @@ function msoWrapper(i, projName, projType, projCreationDate, projPathToData) {
   this.projName = projName,
     this.i = 'mso-' + i,
     this.projType = projType,
-    this.projCreationDate = projCreationDate, //YYYY-MM-DD
-    this.projPathToData = projPathToData,
 
-    this.initDataState = function() {
-      document.querySelector('[data-role=main-segment]').setAttribute('data-state', 'collapsed');
+    this.includesContainerFunction = function() {
+      if (this.projType === 'gallery' || this.projType === 'video') {
+        return true;
+      } else {
+        return false;
+      }
     }
 
-    this.projAppendHTML = '<section class="size-l" data-role="main-segment" data-projid="' + this.i + '" data-creationdate=' + this.projCreationDate + ' data-purpose=' + this.projType + ' data-projname=' + this.projName + '></section>',
-    this.render = function() {
+  this.projCreationDate = projCreationDate, //YYYY-MM-DD
+    this.projPathToData = projPathToData,
+    this.projAppendHTML = '<section class="size-l" data-includescontainer="' + this.includesContainerFunction() + '" data-role="main-segment" data-state="collapsed" data-projid="' + this.i + '" data-creationdate=' + this.projCreationDate + ' data-purpose=' + this.projType + ' data-projname=' + this.projName + '></section>',
+
+    this.segmentAfterHTML = '<hr class="segment-spacing-vertical"/>',
+    this.projAppendHTML = this.projAppendHTML += this.segmentAfterHTML;
+  this.render = function() {
       document.querySelector('main').innerHTML += this.projAppendHTML;
     },
     this.render();
-    this.initDataState();
-
 }

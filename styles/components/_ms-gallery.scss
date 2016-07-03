@@ -1,9 +1,7 @@
 // main: ../main.scss
 
 // styles for collapsed & expanded  ------------------------------------------------------------------------------------------------
-main section[data-purpose=gallery] {
-  cursor: pointer;
-
+main section[data-includescontainer=true] {
   // container for expanded images
   .ms-content-container {
     position: absolute;
@@ -11,7 +9,7 @@ main section[data-purpose=gallery] {
     z-index: 1;
     overflow: hidden;
 
-    img {
+    img, video {
       height: 100%;
     }
   }
@@ -23,12 +21,13 @@ main section[data-purpose=gallery] {
     div {
       background-size: cover;
     }
+    /*
     figcaption {
       position: absolute;
       left: calc(50vw + 50px);
       margin-top: 100px;
     }
-
+    */
     .ms-gt-left, .ms-gt-right {
       position: absolute;
       @include l {
@@ -45,7 +44,7 @@ main section[data-purpose=gallery] {
 }
 
 // specific styles for collapsed state  ------------------------------------------------------------------------------------------------
-main section[data-purpose=gallery][data-state=collapsed] {
+main section[data-includescontainer=true][data-state=collapsed] {
   .ms-content-container {
     pointer-events: none;
     height: 380px;
@@ -89,7 +88,7 @@ main section[data-purpose=gallery][data-state=collapsed] {
 }
 
 // specific styles for expanded state  ------------------------------------------------------------------------------------------------
-main section[data-purpose=gallery][data-state=expanded] {
+main section[data-includescontainer=true][data-state=expanded] {
   .ms-content-container {
     opacity: 1;
     left: 0;
