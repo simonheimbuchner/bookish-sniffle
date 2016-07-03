@@ -48,8 +48,9 @@ define(['lib/getJSONFromFile',
       if (thisobj.projType == 'gallery') {
         initMsoGallery(i, defaultProps.defaultProjPath, defaultProps.defaultThumbPath, thisobj.projType, thisobj.projName, thisobj.projCreationDate, thisobj.projPathToData, thisobj.projHeadTitle, thisobj.projHeadTitle, thisobj.projHeadDesc, thisobj.projHeadTagDisplay, thisobj.projHeadTagHref, thisobj.projThumbnailImages, thisobj.projImages);
       }
-      
+
     }
+
 
   });
 
