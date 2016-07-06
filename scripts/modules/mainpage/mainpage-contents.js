@@ -6,7 +6,6 @@ define(['lib/getJSONFromFile',
           'modules/mainpage/mso-modules/mso-content-container',
           'modules/mainpage/mso-modules/mso-content-gallery',
           'modules/mainpage/mso-modules/mso-content-video',
-          'modules/global-eventlisteners',
           ], function() {
 
 

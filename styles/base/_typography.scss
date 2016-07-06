@@ -20,3 +20,11 @@ h4 {
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
 }
+
+
+q {
+  font-size: 1.6em;
+  quotes: '« ' ' »';
+}
+q:before { content: open-quote }
+q:after  { content: close-quote }
