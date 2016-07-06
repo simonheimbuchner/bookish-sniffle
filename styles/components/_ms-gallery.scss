@@ -66,7 +66,7 @@ main section[data-includescontainer=true][data-state=collapsed] {
   }
   figcaption {
     opacity: 1;
-    transition: opacity .4s 1.4s;
+    transition: opacity .4s 1.4s, padding .4s 1.4s;
   }
   .ms-gallery-thumb {
     .ms-gt-left,
@@ -107,7 +107,8 @@ main section[data-includescontainer=true][data-state=expanded] {
   }
   figcaption {
     opacity: 0;
-    transition: opacity .15s;
+    padding-left: 10px;
+    transition: opacity .15s, padding .4s;
   }
   .ms-gallery-thumb {
     .ms-gt-left,
