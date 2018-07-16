@@ -6,13 +6,13 @@
   "mainSectionObjects": {
     "gallery": [{
       "projType": "gallery",
-      "projName": "Herkulezz",
+      "projName": "Something else",
       "projCreationDate": "2015-05-02",
 
       "projHeadTitle": "Herkulezzz!",
       "projHeadDesc": "Zau geile Äktschn",
-      "projHeadTagDisplay": "",
-      "projHeadTagHref": "",
+      "projHeadTagDisplay": "@christinakse",
+      "projHeadTagHref": "instagram.com",
 
       "projThumbnailImages": [
         "thumb-01.jpg", "thumb-02.jpg"
@@ -25,9 +25,9 @@
       "projName": "Fsafsafs",
       "projCreationDate": "2016-12-04",
 
-      "projHeadTitle": "Herkulezzz!",
+      "projHeadTitle": "Brabrabra!",
       "projHeadDesc": "Zau geile Äktschn",
-      "projHeadTagDisplay": "",
+      "projHeadTagDisplay": "@omgomgomg",
       "projHeadTagHref": "",
 
       "projThumbnailImages": [

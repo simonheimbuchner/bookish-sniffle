@@ -1,5 +1,3 @@
-
-
 // BIND EVENT HANDLER TO MULTIPLE IDENTICAL CLASSES >>>>>>>
 
 function createClickEvent(targetClass, parentId, executedFunction) {
@@ -38,3 +36,29 @@ function toggleState(elem, one, two) {
 createClickEvent('main-segment', "main", function(target) {
   toggleState(target, 'collapsed', 'expanded');
 });
+
+
+if (thisProperty.numKeys == 0) {
+  t = 0;
+} else {
+  n = 0;
+  if (marker.numKeys > 0) {
+    n = marker.nearestKey(time).index;
+    if (marker.key(n).time > time) {
+      n--;
+    }
+  }
+
+  if (n == 0) {
+    t = 0;
+  } else {
+    m = marker.key(n);
+    t = time - m.time;
+  }
+}
+
+valueAtTime(t)
+
+
+
+if (thisProperty.numkeys == 0) {t = 0;}  n = 0;    if (marker.numKeys > 0) {      n = marker.nearestKey(time).index;      if (marker.key(n).time > time) {n--;}    }  if (n == 0) {t = 0;}  else {    m = marker.key(n);    t = time - m.time;  }}valueAtTime(t)
