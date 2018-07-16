@@ -2,4 +2,35 @@
 main section[data-role=main-segment] {
   position: relative;
   cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  @include l {
+    width: 1290px;
+    height: 700px;
+    margin-bottom: 400px;
+  }
+  @include m {
+    width: 100%;
+    height: calc(100vw / 3 * 2);
+  }
+}
+// linie horizontal
+main section[data-role=main-segment] .ms-hr {
+  height: .2em;
+  width: 120%;
+  background-color: $color-grey;
+  margin-left: -100px;
+  margin-top: 300px;
+  position: absolute;
+}
+main section[data-role=main-segment] .ms-hr::before {
+  content: '';
+  display: block;
+  position: absolute;
+  margin-top: -.6em;
+  margin-left: -6em;
+  height: 1em;
+  width: 1em;
+  border: .2em solid $color-grey;
+  border-radius: 3em;
 }

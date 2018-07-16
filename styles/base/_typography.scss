@@ -1,6 +1,5 @@
 // main: ../main.scss
-@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic');
-@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic');
+@import url('https://fonts.googleapis.com/css?family=Heebo:300,400,700');
 body {
   font-size: 10px;
 }
@@ -12,37 +11,11 @@ h3, h4 {
   -webkit-margin-end: 0;
 }
 
-h4 {
-  font-family: Droid Serif, serif;
-  font-size: 1em;
-  line-height: 1.6em;
-  text-transform: lowercase;
-  font-style: italic;
-  letter-spacing: 0.3em;
+h1 {
+  font-size:5em;
+  font-family: Heebo, sans-serif;
   font-weight: 300;
+  line-height: 120%;
+  letter-spacing: 0.05em;
   color: $color-grey;
 }
-
-h3 {
-  font-family: Quicksand, serif;
-  font-size: 1.6em;
-  line-height: 1.6em;
-  text-transform: uppercase;
-  font-style: normal;
-  letter-spacing: 0.3em;
-  font-weight: 700;
-  color: $color-grey;
-}
-
-a {
-  text-decoration: none;
-  color: $color-green;
-}
-
-
-q {
-  font-size: 1.6em;
-  quotes: '« ' ' »';
-}
-q:before { content: open-quote }
-q:after  { content: close-quote }

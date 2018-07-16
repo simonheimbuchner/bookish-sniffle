@@ -1,7 +1,12 @@
 {
   "defaultProps": {
+    "defaultHeaderImagePath": "resources/header",
     "defaultProjPath": "resources/projectdata",
     "defaultThumbPath": "thumb"
+  },
+  "headerProps" : {
+    "headerSiteName" : "simon<br>heimbuchner",
+    "headerBGImage": "bg.jpg"
   },
   "mainSectionObjects": {
     "gallery": [{

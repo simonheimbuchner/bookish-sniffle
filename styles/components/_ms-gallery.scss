@@ -1,12 +1,18 @@
 // main: ../main.scss
+
+
+
 // styles for collapsed & expanded  ------------------------------------------------------------------------------------------------
 main section[data-includescontainer=true] {
   // container for expanded images
   .ms-content-container {
-    position: absolute;
-    background-color: #e8e8e8;
-    z-index: 1;
-    overflow: hidden;
+    position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 100;
+  width: 90vw;
+  height: 90vh;
+  transform: translate(-50%,-50%);
     img,
     video {
       height: 100%;
@@ -15,37 +21,47 @@ main section[data-includescontainer=true] {
   // container for collapsed images
   figure.ms-gallery-thumb {
     z-index: -1;
+    height:100%;
+    width:100%;
+    padding-bottom: 80px;
     div {
       background-size: cover;
     }
-    figcaption {
-      width: 170px;
-      position: absolute;
-      left: 490px;
-      top: 469px;
-      @include m {
-        position: absolute;
-        top: calc(50vw + 30px);
-        left: calc(50vw + 30px);
-        height: calc((100vw / 3 * 2) - (50vw + 30px));
-        width: calc(50vw);
-        display: flex;
-        align-items: center;
-        padding-left: 10vw;
-      }
-    }
-    .ms-gt-left,
-    .ms-gt-right {
-      position: absolute;
+    .ms-gt-left {
+      position: relative;
+      z-index: 0;
       @include l {
+        width: 600px;
+        height: 600px;
+      }
+      @include m {
         width: 380px;
         height: 380px;
+      }
+    }
+    .ms-gt-right {
+      position: absolute;
+      z-index: 1;
+      @include l {
+        width: 90%;
+        height: calc(100% - 80px);
+        margin-top:80px;
       }
       @include m {
         width: calc(50vw + 30px);
         height: calc(50vw + 30px);
       }
     }
+  }
+  .ms-txt {
+    font-size:100em;
+    position: absolute;
+    margin-left: -60%;
+    margin-top:-20%;
+    height:100%;
+    overflow: hidden;
+    filter: drop-shadow(0 0 40px #111111);
+    opacity: .2;
   }
 }
 // specific styles for collapsed state  ------------------------------------------------------------------------------------------------
@@ -73,20 +89,10 @@ main section[data-includescontainer=true][data-state=collapsed] {
     .ms-gt-right {
       transition: margin 0.5s 1s;
     }
-    .ms-gt-left {
-      @include l {
-        margin-left: 0;
-        margin-top: calc((573px - 380px) / 2 + 30px);
-      }
-      @include m {
-        left: 0;
-        margin-top: calc((100% / 3 * 2) - (50vw + 30px));
-      }
-    }
+
     .ms-gt-right {
       @include l {
-        margin-top: calc((573px - 380px) / 2 - 30px);
-        margin-left: calc(700px - 380px);
+        right: 0;
       }
       @include m {
         right: 0;

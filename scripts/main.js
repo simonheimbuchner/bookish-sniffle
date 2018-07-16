@@ -7,14 +7,21 @@ requirejs.config({
     //never includes a ".js" extension since
     //the paths config could be for a directory.
     paths: {
-        domReady: 'lib/domReady'
-    }
+        domReady: 'lib/domReady',
+        jarralax: 'lib/jarallax.min'
+    },
+    urlArgs: "bust=v2"
+
 });
 
 // mainpage contents
-requirejs(['domReady', 'modules/mainpage/mainpage-contents'], function(domReady) {
+requirejs(['domReady', 'modules/header/header-contents', 'modules/mainpage/mainpage-contents', 'jarralax'], function(domReady) {
   domReady(function() {
+
     // event listeners
     requirejs(['modules/global-eventlisteners']);
+
+
+
   })
 });

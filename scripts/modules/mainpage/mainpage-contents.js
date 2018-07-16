@@ -1,7 +1,6 @@
 define(['lib/getJSONFromFile',
           'modules/mainpage/mso-init-functions',
           'modules/mainpage/mso-modules/mso-wrapper',
-          'modules/mainpage/mso-modules/mso-head',
           'modules/mainpage/mso-modules/mso-thumbnail',
           'modules/mainpage/mso-modules/mso-content-container',
           'modules/mainpage/mso-modules/mso-content-gallery',
@@ -45,7 +44,7 @@ define(['lib/getJSONFromFile',
       var thisobj = sortedJSONArr[i];
       // render galleries
       if (thisobj.projType == 'gallery') {
-        initMsoGallery(i, defaultProps.defaultProjPath, defaultProps.defaultThumbPath, thisobj.projType, thisobj.projName, thisobj.projCreationDate, thisobj.projPathToData, thisobj.projHeadTitle, thisobj.projHeadTitle, thisobj.projHeadDesc, thisobj.projHeadTagDisplay, thisobj.projHeadTagHref, thisobj.projThumbnailImages, thisobj.projImages);
+        initMsoGallery(i, defaultProps.defaultProjPath, defaultProps.defaultThumbPath, thisobj.projType, thisobj.projName, thisobj.projCreationDate, thisobj.projPathToData, thisobj.projThumbnailImages, thisobj.projImages);
       }
 
     }

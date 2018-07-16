@@ -10,7 +10,7 @@ function msoContentGallery(i, defaultProjPath, projPathToData, projCreationDate,
       for (var i in array) {
         output += '<img src="' + this.defaultProjPath + '/' + this.projCreationDate + '/' + array[i] + '">';
       }
-      var output = '<div class="size-l ms-gallery-container">' + output + '</div>';
+      var output = '<div class="ms-gallery-container">' + output + '</div>';
       return output;
     },
     this.projGenerateImageControlsHTML = function() {

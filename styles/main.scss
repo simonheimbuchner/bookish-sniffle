@@ -1,19 +1,20 @@
+// compileOnSave
+// compileOnSave: true
 // includes
 
 // base
 @import 'base/normalize';
 @import 'base/customreset';
 @import 'base/colors';
+@import 'base/body';
 @import 'base/typography';
 @import 'base/breakpoints';
 @import 'base/notransition';
 
 //components
-@import 'components/layout';
+@import 'components/header';
   //main segment
   @import 'components/ms-main-segment';
   @import 'components/ms-gallery';
-  @import 'components/ms-spacing';
-  @import 'components/ms-content-head';
 
 @import 'components/resize-overlay';
