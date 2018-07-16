@@ -7,12 +7,7 @@ main section[data-includescontainer=true] {
   // container for expanded images
   .ms-content-container {
     position: fixed;
-  left: 50%;
-  top: 50%;
-  z-index: 100;
-  width: 90vw;
-  height: 90vh;
-  transform: translate(-50%,-50%);
+
     img,
     video {
       height: 100%;
@@ -104,8 +99,13 @@ main section[data-includescontainer=true][data-state=collapsed] {
 main section[data-includescontainer=true][data-state=expanded] {
   .ms-content-container {
     opacity: 1;
-    left: 0;
-    top: 0;
+    left: 50%;
+    top: 50%;
+    z-index: 100;
+    width: 90vw;
+    height: 90vh;
+    transform: translate(-50%,-50%);
+    overflow-y:scroll;
     transition: opacity 0.5s 0.4s, left 0.7s 0.8s, top 0.7s 0.8s, height 0.7s 0.8s, width 0.7s 0.8s;
     img {
       transition: margin 0.5s 1.4s, opacity 0.3s 1.4s;

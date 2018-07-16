@@ -15,11 +15,21 @@ requirejs.config({
 });
 
 // mainpage contents
-requirejs(['domReady', 'modules/header/header-contents', 'modules/mainpage/mainpage-contents', 'jarralax'], function(domReady) {
+requirejs(['domReady', 'modules/buildModules', 'jarralax'], function(domReady) {
   domReady(function() {
-
     // event listeners
-    requirejs(['modules/global-eventlisteners']);
+    requirejs(['lib/global-eventlisteners']);
+
+    //start of doc
+
+
+
+
+
+
+
+
+
 
 
 

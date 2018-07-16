@@ -1,59 +1,48 @@
 {
-  "defaultProps": {
-    "defaultHeaderImagePath": "resources/header",
-    "defaultProjPath": "resources/projectdata",
-    "defaultThumbPath": "thumb"
-  },
-  "headerProps" : {
-    "headerSiteName" : "simon<br>heimbuchner",
-    "headerBGImage": "bg.jpg"
-  },
-  "mainSectionObjects": {
-    "gallery": [{
-      "projType": "gallery",
-      "projName": "Something else",
-      "projCreationDate": "2015-05-02",
+      "defaultProps": {
+            "defaultHeaderImagePath": "resources/header",
+            "defaultProjPath": "resources/projectdata",
+            "defaultThumbPath": "thumb"
+      },
+      "headerProps" : {
+            "headerSiteName" : "simon<br>heimbuchner",
+            "headerBGImage": "bg.jpg"
+      },
+      "pageContents": [
+            {
+                    "projID": 1,
+                    "projType": "gallery",
+                    "projName": "Something else",
+                    "projCreationDate": "2015-05-02",
 
-      "projHeadTitle": "Herkulezzz!",
-      "projHeadDesc": "Zau geile Äktschn",
-      "projHeadTagDisplay": "@christinakse",
-      "projHeadTagHref": "instagram.com",
+                    "projHeadTitle": "Herkulezzz!",
+                    "projHeadDesc": "Zau geile Äktschn",
+                    "projHeadTagDisplay": "@christinakse",
+                    "projHeadTagHref": "instagram.com",
 
-      "projThumbnailImages": [
-        "thumb-01.jpg", "thumb-02.jpg"
-      ],
-      "projImages": [
-        "01.jpg", "02.jpg", "03.jpg"
-      ]
-    }, {
-      "projType": "gallery",
-      "projName": "Fsafsafs",
-      "projCreationDate": "2016-12-04",
+                    "projThumbnailImages": [
+                      "thumb-01.jpg", "thumb-02.jpg"
+                    ],
+                    "projImages": [
+                      "01.jpg", "02.jpg", "03.jpg"
+                    ]
+            }, {
+                    "projID": 2,
+                    "projType": "gallery",
+                    "projName": "Fsafsafs",
+                    "projCreationDate": "2016-12-04",
 
-      "projHeadTitle": "Brabrabra!",
-      "projHeadDesc": "Zau geile Äktschn",
-      "projHeadTagDisplay": "@omgomgomg",
-      "projHeadTagHref": "",
+                    "projHeadTitle": "Brabrabra!",
+                    "projHeadDesc": "Zau geile Äktschn",
+                    "projHeadTagDisplay": "@omgomgomg",
+                    "projHeadTagHref": "",
 
-      "projThumbnailImages": [
-        "thumb-01.jpg", "thumb-02.jpg"
-      ],
-      "projImages": [
-        "01.jpg", "02.jpg", "03.jpg"
-      ]
-    }],
-    "image": [{
-      "projType": "image",
-      "projName": "Nonono",
-      "projDesc": "achja?",
-      "projCreationDate": "2014-02-05",
-      "projImage": "01.jpg"
-    }, {
-      "projType": "image",
-      "projName": "Vicky Lagerkeller",
-      "projDesc": "achja?",
-      "projCreationDate": "2016-11-05",
-      "projImage": "02.jpg"
-    }]
-  }
+                    "projThumbnailImages": [
+                      "thumb-01.jpg", "thumb-02.jpg"
+                    ],
+                    "projImages": [
+                      "01.jpg", "02.jpg", "03.jpg"
+                    ]
+            }
+        ]
 }
