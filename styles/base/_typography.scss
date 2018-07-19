@@ -1,7 +1,8 @@
 // main: ../main.scss
-@import url('https://fonts.googleapis.com/css?family=Heebo:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Heebo:100,300,400,700');
 body {
   font-size: 10px;
+  font-family: 'Heebo', sans-serif;
 }
 
 h3, h4 {
@@ -9,13 +10,4 @@ h3, h4 {
   -webkit-margin-after: 0;
   -webkit-margin-start: 0;
   -webkit-margin-end: 0;
-}
-
-h1 {
-  font-size:5em;
-  font-family: Heebo, sans-serif;
-  font-weight: 300;
-  line-height: 120%;
-  letter-spacing: 0.05em;
-  color: $color-grey;
 }

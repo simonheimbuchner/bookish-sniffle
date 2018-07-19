@@ -6,19 +6,21 @@
       },
       "headerProps" : {
             "headerSiteName" : "simon<br>heimbuchner",
-            "headerBGImage": "bg.jpg"
+            "headerBGImage": "bg.jpg",
+            "headerContactIcon": "contact.svg",
+            "headerMyEmailAdress": "simonheimbuchner@gmail.com"
       },
       "pageContents": [
             {
                     "projID": 1,
                     "projType": "gallery",
                     "projName": "Something else",
-                    "projCreationDate": "2015-05-02",
+                    "projFolder": "test",
 
-                    "projHeadTitle": "Herkulezzz!",
-                    "projHeadDesc": "Zau geile Äktschn",
-                    "projHeadTagDisplay": "@christinakse",
+                    "projHeadTitle": "Herksfasz!",
+                    "projHeadDesc": "Motion Dfafafagn",
                     "projHeadTagHref": "instagram.com",
+                    "projBackgroundColor": "#1A181B",
 
                     "projThumbnailImages": [
                       "thumb-01.jpg", "thumb-02.jpg"
@@ -30,18 +32,36 @@
                     "projID": 2,
                     "projType": "gallery",
                     "projName": "Fsafsafs",
-                    "projCreationDate": "2016-12-04",
+                    "projFolder": "skate",
 
                     "projHeadTitle": "Brabrabra!",
-                    "projHeadDesc": "Zau geile Äktschn",
-                    "projHeadTagDisplay": "@omgomgomg",
+                    "projHeadDesc": "Motion Design, Brand Design",
                     "projHeadTagHref": "",
+                    "projBackgroundColor": "#111",
 
                     "projThumbnailImages": [
                       "thumb-01.jpg", "thumb-02.jpg"
                     ],
                     "projImages": [
                       "01.jpg", "02.jpg", "03.jpg"
+                    ]
+            },
+            {
+                    "projID": 3,
+                    "projType": "gallery",
+                    "projName": "Schorsch",
+                    "projFolder": "schorsch",
+
+                    "projHeadTitle": "Respekt",
+                    "projHeadDesc": "Motion Design, Brand Design",
+                    "projHeadTagHref": "",
+                    "projBackgroundColor": "#12193A",
+
+                    "projThumbnailImages": [
+                      "thumb-01.jpg", "thumb-02.jpg"
+                    ],
+                    "projImages": [
+                      "01.jpg", "02.jpg"
                     ]
             }
         ]

@@ -1,14 +1,14 @@
 // main: ../main.scss
 $s-width: 480px;
-$m-width: 860px;
-$l-width: 1200px;
+$m-width: 750px;
+$l-width: 1290px;
 @mixin s {
-  @media (max-width: #{$s-width}) {
+  @media (max-width: #{$m-width}) {
     @content;
   }
 }
 @mixin m {
-  @media (max-width: #{$m-width}) {
+  @media (max-width: #{$l-width}) {
     @content;
   }
 }

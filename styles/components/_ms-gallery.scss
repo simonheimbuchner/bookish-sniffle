@@ -1,25 +1,38 @@
 // main: ../main.scss
 
 
-
+.ms-gallery-thumb:hover .ms-gt-right {
+  filter: grayscale(100%);
+}
+.ms-gallery-thumb:hover .ms-gt-left {
+  filter: blur(4px) grayscale(100%);
+}
 // styles for collapsed & expanded  ------------------------------------------------------------------------------------------------
-main section[data-includescontainer=true] {
-  // container for expanded images
-  .ms-content-container {
-    position: fixed;
+.main-segment {
+  .ms-txt {
+    @include l {
+      font-size:100em;
+      position: absolute;
+      margin-left: -60%;
+      margin-top:-20%;
+      height:100%;
+      overflow: hidden;
+      filter: drop-shadow(0 0 40px #111111);
+      opacity: .2;
+    }
+    @include m {
 
-    img,
-    video {
-      height: 100%;
     }
   }
   // container for collapsed images
   figure.ms-gallery-thumb {
+    -webkit-margin-start: 0;
+    cursor: pointer;
     z-index: -1;
     height:100%;
     width:100%;
-    padding-bottom: 80px;
     div {
+      background-repeat: no-repeat;
       background-size: cover;
     }
     .ms-gt-left {
@@ -30,107 +43,70 @@ main section[data-includescontainer=true] {
         height: 600px;
       }
       @include m {
-        width: 380px;
-        height: 380px;
+        width: 40vw;
+        height: 40vw;
+      }
+      @include s {
+        width: 91vw;
+        height: 91vw;
       }
     }
     .ms-gt-right {
+      background-size: cover;
+      background-position: 50% 50%;
       position: absolute;
       z-index: 1;
+      right: 0;
+      opacity: 1;
+      background-color: $color-grey;
       @include l {
+        transform-origin: 0 100%;
         width: 90%;
         height: calc(100% - 80px);
         margin-top:80px;
       }
       @include m {
-        width: calc(50vw + 30px);
-        height: calc(50vw + 30px);
+        width: 90%;
+        height: calc(100vw / 2);
+        margin-top: 30px;
+      }
+      @include s {
+        height: 100vw;
       }
     }
   }
-  .ms-txt {
-    font-size:100em;
-    position: absolute;
-    margin-left: -60%;
-    margin-top:-20%;
-    height:100%;
-    overflow: hidden;
-    filter: drop-shadow(0 0 40px #111111);
-    opacity: .2;
-  }
-}
-// specific styles for collapsed state  ------------------------------------------------------------------------------------------------
-main section[data-includescontainer=true][data-state=collapsed] {
-  .ms-content-container {
-    pointer-events: none;
-    height: 380px;
-    left: calc(50% - (700px / 2) );
-    top: calc((380px / 2) - 90px);
-    width: 700px;
-    opacity: 0;
-    transition: opacity 0.5s 0.7s, left 0.5s 0.3s, top 0.5s 0.3s, height 0.5s 0.3s, width 0.5s 0.3s;
-    img {
-      margin-top: 100px;
-      opacity: 0;
-      transition: margin 0.6s, opacity 0.3s;
-    }
-  }
-  figcaption {
-    opacity: 1;
-    transition: opacity .4s 1.4s, padding .4s 1.4s;
-  }
-  .ms-gallery-thumb {
-    .ms-gt-left,
-    .ms-gt-right {
-      transition: margin 0.5s 1s;
-    }
 
-    .ms-gt-right {
-      @include l {
-        right: 0;
-      }
-      @include m {
-        right: 0;
-      }
-    }
-  }
 }
 // specific styles for expanded state  ------------------------------------------------------------------------------------------------
-main section[data-includescontainer=true][data-state=expanded] {
-  .ms-content-container {
-    opacity: 1;
-    left: 50%;
-    top: 50%;
-    z-index: 100;
-    width: 90vw;
-    height: 90vh;
-    transform: translate(-50%,-50%);
-    overflow-y:scroll;
-    transition: opacity 0.5s 0.4s, left 0.7s 0.8s, top 0.7s 0.8s, height 0.7s 0.8s, width 0.7s 0.8s;
-    img {
-      transition: margin 0.5s 1.4s, opacity 0.3s 1.4s;
-    }
+.main-segment[data-state=collapsed] {
+  .ms-gt-left { // out
+      transition: opacity 1.5s .5s, filter .3s;
   }
-  figcaption {
-    opacity: 0;
-    padding-left: 10px;
-    transition: opacity .15s, padding .4s;
+  .ms-gt-right {
+      transition: background-position 1s, height .3s, opacity .5s, background-size .4s, filter .3s;
+  }
+}
+.main-segment[data-state=expanded] {
+  .ms-hr {
+      width: 0;
+      opacity: 0;
   }
   .ms-gallery-thumb {
-    .ms-gt-left,
-    .ms-gt-right {
-      transition: margin 0.5s;
-    }
-    .ms-gt-left {
+    .ms-gt-left { // fade in
+      transition: opacity 1s, filter 1s, background-position 1s;
       @include l {
-        margin-top: calc((380px / 2) - 90px) !important;
+        background-position: 0px 600px;
+        opacity: 0 !important;
       }
       @include m {}
     }
     .ms-gt-right {
+      transition: margin 1s .2s, background-position 1s, height 1.2s, width 1.2s, opacity 1s 1s;
+      opacity: 0 !important;
       @include l {
-        margin-top: calc((380px / 2) - 90px) !important;
-        margin-left: calc(700px - 380px);
+        margin-top: -200px !important;
+        height: 0 !important;
+        background-position-y: -450%;
       }
       @include m {}
     }

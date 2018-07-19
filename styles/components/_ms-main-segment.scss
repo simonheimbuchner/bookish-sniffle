@@ -1,7 +1,6 @@
 // main: ../main.scss
-main section[data-role=main-segment] {
+.main-segment {
   position: relative;
-  cursor: pointer;
   display: block;
   margin: 0 auto;
   @include l {
@@ -10,27 +9,39 @@ main section[data-role=main-segment] {
     margin-bottom: 400px;
   }
   @include m {
-    width: 100%;
-    height: calc(100vw / 3 * 2);
+    width: 98vw;
+    height: auto;
+    margin-bottom: 30vw;
   }
-}
-// linie horizontal
-main section[data-role=main-segment] .ms-hr {
-  height: .2em;
-  width: 120%;
-  background-color: $color-grey;
-  margin-left: -100px;
-  margin-top: 300px;
-  position: absolute;
-}
-main section[data-role=main-segment] .ms-hr::before {
-  content: '';
-  display: block;
-  position: absolute;
-  margin-top: -.6em;
-  margin-left: -6em;
-  height: 1em;
-  width: 1em;
-  border: .2em solid $color-grey;
-  border-radius: 3em;
+
+    .ms-hr {
+      @include l {
+        transition: width 1s, opacity 1s;
+        height: .2em;
+        width: 120%;
+        background-color: $color-grey;
+        margin-left: -100px;
+        margin-top: 300px;
+        position: absolute;
+      }
+      @include m {
+        display: none;
+      }
+    }
+    .ms-hr::before {
+      @include l {
+        content: '';
+        display: block;
+        position: absolute;
+        margin-top: -.6em;
+        margin-left: -6em;
+        height: 1em;
+        width: 1em;
+        border: .2em solid $color-grey;
+        border-radius: 3em;
+      }
+      @include m {
+        display: none;
+      }
+    }
 }
