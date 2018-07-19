@@ -27,6 +27,12 @@
                     ],
                     "projImages": [
                       "01.jpg", "02.jpg", "03.jpg"
+                    ],
+                    "projContent": [
+                      {"type":"image", "imgName": "01.jpg", "imgAlt": "alttext"},
+                      {"type":"text", "purpose": "headline", "text": "Branding der ARD Alpha Fernsehsendung RESPEKT"},
+                      {"type":"text", "purpose": "subline", "text": "Brand Design, Motion Design", "posY": -10},
+                      {"type":"image", "imgName": "02.jpg", "imgAlt": "alttext"}
                     ]
             }, {
                     "projID": 2,
@@ -44,6 +50,12 @@
                     ],
                     "projImages": [
                       "01.jpg", "02.jpg", "03.jpg"
+                    ],
+                    "projContent": [
+                      {"type":"image", "imgName": "01.jpg", "imgAlt": "alttext"},
+                      {"type":"text", "purpose": "headline", "text": "Branding der ARD Alpha Fernsehsendung RESPEKT"},
+                      {"type":"text", "purpose": "subline", "text": "Brand Design, Motion Design", "posY": -10},
+                      {"type":"image", "imgName": "02.jpg", "imgAlt": "alttext"}
                     ]
             },
             {
@@ -62,6 +74,12 @@
                     ],
                     "projImages": [
                       "01.jpg", "02.jpg"
+                    ],
+                    "projContent": [
+                      {"type":"image", "imgName": "01.jpg", "imgAlt": "alttext"},
+                      {"type":"text", "textstyle": "headline", "text": "Styleguide", "posY": 0},
+                      {"type":"text", "textstyle": "subline", "text": "ein ca. 40-seitiges Manual für Designer mit Angaben zu Typografie, Logo, Farbraum, Stilelementen, Einsatz von Realbildern, Videoverpackung, Motion Design etc.", "posY": -10},
+                      {"type":"image", "imgName": "02.jpg", "imgAlt": "alttext"}
                     ]
             }
         ]

@@ -21,7 +21,10 @@
       opacity: .2;
     }
     @include m {
-
+      display: none;
+    }
+    @include s {
+      display: none;
     }
   }
   // container for collapsed images
