@@ -1,4 +1,8 @@
 // main: ../main.scss
+
+body[data-lightboxstate=expanded] .pagecontent{
+  overflow-y: hidden !important;
+}
 .main-segment {
   position: relative;
   display: block;
@@ -11,7 +15,7 @@
   @include m {
     width: 98vw;
     height: auto;
-    margin-bottom: 30vw;
+    margin-bottom: 50vw;
   }
   @include s {
     width: 100vw;

@@ -2,7 +2,8 @@
       "defaultProps": {
             "defaultHeaderImagePath": "resources/header",
             "defaultProjPath": "resources/projectdata",
-            "defaultThumbPath": "thumb"
+            "defaultThumbPath": "thumb",
+            "defaultBackgroundPath": "bg"
       },
       "headerProps" : {
             "headerSiteName" : "simon<br>heimbuchner",
@@ -14,72 +15,67 @@
             {
                     "projID": 1,
                     "projType": "gallery",
-                    "projName": "Something else",
                     "projFolder": "test",
 
                     "projHeadTitle": "Herksfasz!",
                     "projHeadDesc": "Motion Dfafafagn",
                     "projHeadTagHref": "instagram.com",
+                    "projBackgroundColorOrImage": 0,
                     "projBackgroundColor": "#1A181B",
+                    "projBackgroundImage": "bg.jpg",
 
                     "projThumbnailImages": [
                       "thumb-01.jpg", "thumb-02.jpg"
                     ],
-                    "projImages": [
-                      "01.jpg", "02.jpg", "03.jpg"
-                    ],
                     "projContent": [
-                      {"type":"image", "imgName": "01.jpg", "imgAlt": "alttext"},
-                      {"type":"text", "purpose": "headline", "text": "Branding der ARD Alpha Fernsehsendung RESPEKT"},
-                      {"type":"text", "purpose": "subline", "text": "Brand Design, Motion Design", "posY": -10},
-                      {"type":"image", "imgName": "02.jpg", "imgAlt": "alttext"}
+                      {"type":"image", "src": "01.jpg", "alt": "alttext"},
+                      {"type":"video", "src": "intro.mp4"},
+                      {"type":"text", "purpose": "headline", "text": "Branding der ARD Alpha Fernsehsendung RESPEKT", "paddings": [0,0]},
+                      {"type":"text", "purpose": "subline", "text": "Brand Design, Motion Design", "paddings": [0,0]},
+                      {"type":"image", "src": "02.jpg", "alt": "alttext"}
                     ]
             }, {
                     "projID": 2,
                     "projType": "gallery",
-                    "projName": "Fsafsafs",
                     "projFolder": "skate",
 
                     "projHeadTitle": "Brabrabra!",
                     "projHeadDesc": "Motion Design, Brand Design",
                     "projHeadTagHref": "",
-                    "projBackgroundColor": "#111",
+                    "projBackgroundColorOrImage": 0,
+                    "projBackgroundColor": "#1A181B",
+                    "projBackgroundImage": "bg.jpg",
 
                     "projThumbnailImages": [
                       "thumb-01.jpg", "thumb-02.jpg"
                     ],
-                    "projImages": [
-                      "01.jpg", "02.jpg", "03.jpg"
-                    ],
                     "projContent": [
-                      {"type":"image", "imgName": "01.jpg", "imgAlt": "alttext"},
-                      {"type":"text", "purpose": "headline", "text": "Branding der ARD Alpha Fernsehsendung RESPEKT"},
-                      {"type":"text", "purpose": "subline", "text": "Brand Design, Motion Design", "posY": -10},
-                      {"type":"image", "imgName": "02.jpg", "imgAlt": "alttext"}
+                      {"type":"image", "src": "01.jpg", "alt": "alttext"},
+                      {"type":"text", "purpose": "headline", "text": "Branding der ARD Alpha Fernsehsendung RESPEKT", "paddings": [0,0]},
+                      {"type":"text", "purpose": "subline", "text": "Brand Design, Motion Design", "paddings": [0,0]},
+                      {"type":"image", "src": "02.jpg", "alt": "alttext"}
                     ]
             },
             {
                     "projID": 3,
                     "projType": "gallery",
-                    "projName": "Schorsch",
                     "projFolder": "schorsch",
 
                     "projHeadTitle": "Respekt",
                     "projHeadDesc": "Motion Design, Brand Design",
                     "projHeadTagHref": "",
-                    "projBackgroundColor": "#12193A",
+                    "projBackgroundColorOrImage": 1,
+                    "projBackgroundColor": "#12193a",
+                    "projBackgroundImage": "bg.jpg",
 
                     "projThumbnailImages": [
                       "thumb-01.jpg", "thumb-02.jpg"
                     ],
-                    "projImages": [
-                      "01.jpg", "02.jpg"
-                    ],
                     "projContent": [
-                      {"type":"image", "imgName": "01.jpg", "imgAlt": "alttext"},
-                      {"type":"text", "textstyle": "headline", "text": "Styleguide", "posY": 0},
-                      {"type":"text", "textstyle": "subline", "text": "ein ca. 40-seitiges Manual für Designer mit Angaben zu Typografie, Logo, Farbraum, Stilelementen, Einsatz von Realbildern, Videoverpackung, Motion Design etc.", "posY": -10},
-                      {"type":"image", "imgName": "02.jpg", "imgAlt": "alttext"}
+                      {"type":"image", "src": "01.png", "alt": "alttext"},
+                      {"type":"text", "style": "headline", "text": "Styleguide", "paddings": [0,0]},
+                      {"type":"text", "style": "subline", "text": "ein ca. 40-seitiges Manual für Designer mit Angaben zu Typografie, Logo, Farbraum, Stilelementen, Einsatz von Realbildern, Videoverpackung, Motion Design etc.", "paddings": [0,0]}
+
                     ]
             }
         ]

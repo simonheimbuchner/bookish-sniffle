@@ -8,17 +8,18 @@ requirejs.config({
     //the paths config could be for a directory.
     paths: {
         domReady: 'lib/domReady',
-        jarralax: 'lib/jarallax.min'
     },
     urlArgs: "bust=v2"
 
 });
 
 // mainpage contents
-requirejs(['domReady', 'modules/buildModules', 'jarralax'], function(domReady) {
+requirejs(['domReady', 'modules/buildModules', 'https://unpkg.com/jarallax@1.10/dist/jarallax.min.js'], function(domReady) { // link: video js, framework for video
   domReady(function() {
+    document.addEventListener("touchstart", function(){}, true); // ios touch fix
     // event listeners
     requirejs(['lib/global-eventlisteners']);
+
 
     //start of doc
 
