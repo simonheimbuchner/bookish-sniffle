@@ -1,0 +1,11 @@
+// main: ../main.scss
+body {
+  overflow-x:hidden;
+  background-color: $color-bg;
+  ::selection {
+  background: #FFF; /* WebKit/Blink Browsers */
+  }
+  ::-moz-selection {
+    background: #FFF; /* Gecko Browsers */
+  }
+}

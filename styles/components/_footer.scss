@@ -1,0 +1,26 @@
+// main: ../main.scss
+
+footer {
+
+  color: $color-grey;
+  font-size: 1.5em;
+  font-weight:300;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-bottom: 100px;
+  @include l {
+    width: 1290px;
+    margin: 100px auto;
+  }
+  @include m {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  @include s {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  a {
+    color: $color-grey;
+  }
+}

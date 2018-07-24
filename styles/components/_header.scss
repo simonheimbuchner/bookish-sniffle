@@ -1,0 +1,82 @@
+// main: ../main.scss
+
+header {
+  position: relative;
+  display: block;
+  width: 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  @include l {
+    height: 90vh;
+    margin-bottom: 300px;
+  }
+  @include m {
+    height: 60vh;
+    margin-bottom: 100px;
+  }
+  @include s {
+    height: 90vh;
+    margin-bottom: 70px;
+  }
+}
+
+.headercontent {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
+  width: auto;
+  position: absolute;
+  left: 50%;
+  top:50%;
+  @include l {
+    transform: translate3D(-50%,calc(-50% + var(--translateY)),0);
+    opacity: var(--opacity);
+  }
+  @include m {
+    transform: translate3D(-50%,-50%,0);
+    opacity: 1;
+  }
+  @include s {
+      transform: translate3D(-50%,-50%,0);
+      opacity: 1;
+  }
+  h1{
+    font-size:5em;
+    font-family: Heebo, sans-serif;
+    font-weight: 300;
+    line-height: 120%;
+    letter-spacing: 0.05em;
+    color: $color-grey;
+    -webkit-margin-after: 0;
+    -webkit-margin-before: 0;
+  }
+  .contact {
+    transition: opacity .4s;
+    width: 80px;
+    height: 80px;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 1;
+    @include l {
+      margin: 0 auto;
+      margin-top: 100px;
+    }
+    @include m {
+      margin: 0 auto;
+      margin-top: 11px;
+    }
+    @include s {
+      width: 90px;
+      height: 90px;
+      background-position: left;
+      margin-top: -9px;
+      margin-left: 2px;
+    }
+  }
+
+  .contact:hover {
+    opacity: .8;
+  }
+}

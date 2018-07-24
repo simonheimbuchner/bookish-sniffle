@@ -1,0 +1,278 @@
+// main: ../main.scss
+
+$lightbox-UIback-linestrength: .2em;
+
+body[data-lightboxstate=expanded] {
+  overflow-y: hidden !important;
+}
+
+lightbox[data-lightboxstate=collapsed] #lightbox-header h2 {
+  transition: opacity 1s, transform 1.5s;
+  transform: translate3D(0, 100%, 0) !important;
+  opacity: 0 !important;
+}
+lightbox[data-lightboxstate=expanded] #lightbox-header h2 {
+  transition: opacity 1s, transform 2s;
+  transform: translate3D(0,0,0);
+  opacity: 1;
+}
+lightbox[data-lightboxstate=collapsed] + #pagecontent {
+  transition: opacity 1s;
+  opacity: 1;
+}
+lightbox[data-lightboxstate=expanded] + #pagecontent {
+  transition: opacity 1s;
+  opacity: 0;
+}
+lightbox[data-lightboxstate=collapsed] #lightbox-contents {
+  transition: opacity .5s;
+  opacity: 0;
+}
+lightbox[data-lightboxstate=expanded] #lightbox-contents {
+  margin-bottom: 10vw;
+  transition: opacity .1s .2s;
+  opacity: 1;
+}
+lightbox[data-lightboxstate=collapsed] .lightbox-UIback-arrow-container {
+  transform: translate3D(-50%,50%,0);
+}
+lightbox[data-lightboxstate=expanded] .lightbox-UIback-arrow-container {
+  transform: translate3D(-50%,0,0);
+}
+lightbox[data-lightboxstate=collapsed] .lightbox-UIback-line {
+  transition: height .5s;
+  height: 0;
+}
+lightbox[data-lightboxstate=expanded] .lightbox-UIback-line {
+  transition: height 1s 1.2s;
+}
+lightbox[data-lightboxstate=collapsed] {
+  opacity: 0;
+  transition: transform 1s, opacity .1s 1s;
+  transform: translate3D(0,100vh,0);
+  pointer-events: none;
+}
+lightbox[data-lightboxstate=expanded] {
+  transition: transform 1s .5s;
+  transform: translate3D(0,0,0);
+  pointer-events:all;
+}
+lightbox {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+  left:0;
+  top:0;
+  bottom: 0;
+  right: 0;
+  z-index:100;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  @include l {
+    background-size: 1290px auto;
+    width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  @include m {
+    width: 100%;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  @include s {
+    padding: 0;
+  }
+
+  .lightbox-UIback-arrow-container {
+    transition: transform 1s .8s;
+    height: 400px;
+    position: absolute;
+    z-index: 0;
+    width: 70px;
+    left: 50%;
+    // transform: translate(-50%,0); translate3D in collapsed/expanded uptop î
+    margin-top: 45px;
+  }
+  .lightboxBackBtn {
+    cursor: pointer;
+    z-index: 500;
+    display: block;
+  }
+  .lightbox-UIback-arrow-circle {
+    width: 70px;
+    height: 70px;
+    border: $lightbox-UIback-linestrength solid $color-UILines;
+    border-radius: 70px;
+  }
+
+  .lightbox-UIback-arrow-circle:active > .lightbox-UIback-arrow {
+
+  }
+  .lightbox-UIback-arrow-circle:hover > .lightbox-UIback-arrow {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    margin-left: 8px;
+}
+  .lightbox-UIback-arrow {
+    transition: margin-left .5s;
+    width: 20px;
+    height: $lightbox-UIback-linestrength;
+    margin-top: 33px;
+    margin-left: 26px;
+    background-color: $color-UILines;
+  }
+  .lightbox-UIback-arrow::before { // left arrow
+    width: 11px;
+    height: $lightbox-UIback-linestrength;
+    content: '';
+    display: block;
+    background-color: $color-UILines;
+    transform: rotate(-40deg);
+    transform-origin: 0 0;
+  }
+  .lightbox-UIback-arrow::after { // right arrow
+    width: 13px;
+    height: $lightbox-UIback-linestrength;
+    margin-top: -2px;
+    content: '';
+    display: block;
+    background-color: $color-UILines;
+    transform: rotate(40deg);
+    transform-origin: 0 0;
+  }
+  .lightbox-UIback-line {
+    width: $lightbox-UIback-linestrength;
+    content: '';
+    display: block;
+    background-color: $color-UILines;
+    margin-left: 33px;
+    height: 293px;
+    margin-top: 20px;
+  }
+
+
+  #lightbox-header {
+      position: relative; // makes z-index work properly
+      @include l {
+        height: 400px;
+        width: 1290px;
+        margin: 0 auto;
+      }
+      @include m {
+        height: 300px;
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+      @include s {
+        height: 270px;
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+
+      h2 {
+        color: $color-lightboxText;
+        letter-spacing: .02em;
+        font-size: 18em;
+        font-weight: 700;
+        -webkit-margin-before: 133px;
+        -webkit-margin-after: 0;
+        line-height: 119%;
+        @include l {
+          padding-left: 40px;
+        }
+        @include m {
+          font-size: 11vw;
+        }
+        @include s {
+          -webkit-margin-before: 193px
+        }
+      }
+      p {
+        display: block;
+        color: $color-lightboxText;
+        font-size: 3em;
+        font-weight: 100;
+        line-height: 130%;
+        width: 100%;
+        height: 3em;
+        @include l {
+          margin-left: 100px;
+        }
+        @include m {
+          margin-left: 0;
+        }
+        @include s {
+          font-weight: 300;
+        }
+      }
+  }
+  #lightbox-contents {
+    @include m {
+
+    }
+    @include l {
+      width: 1290px;
+      margin: 0 auto;
+    }
+    img,video {
+      width:100%;
+      height:auto;
+      margin: -1px auto;
+    }
+    p {
+      box-sizing: border-box;
+      padding-left:10%;
+      padding-right:10%;
+      display: block;
+      color: $color-lightboxText;
+      font-size: 3em;
+      line-height: 130%;
+      @include l {
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+      @include m {
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+      @include s {
+        padding-left: 10%;
+        padding-right: 10%;
+        font-size: 2em;
+      }
+    }
+
+    p[data-style=headline] {
+      font-weight: 700;
+      letter-spacing: .04em;
+      -webkit-margin-before: .5em;
+      -webkit-margin-after: 1.3em;
+      -webkit-margin-start: 0px;
+      -webkit-margin-end: 0px;
+      @include s {
+        letter-spacing: .05em;
+      }
+    }
+    p[data-style=subline] {
+      font-weight: 100;
+      line-height: 140%;
+      -webkit-margin-before: .5em;
+      -webkit-margin-after: 1em;
+      -webkit-margin-start: 0px;
+      -webkit-margin-end: 0px;
+      @include s {
+        font-weight: 300;
+        letter-spacing: .01em;
+        line-height: 160%;
+      }
+    }
+
+  }
+
+}
