@@ -5,13 +5,14 @@
   filter: grayscale(100%);
 }
 .ms-gallery-thumb:hover .ms-gt-left {
-  filter: blur(4px) grayscale(100%);
+  filter: blur(7px) grayscale(100%) !important;
 }
 // styles for collapsed & expanded  ------------------------------------------------------------------------------------------------
 .main-segment {
   .ms-txt {
     @include l {
-      font-size:100em;
+      font-weight: 700;
+      font-size: 80em;
       position: absolute;
       margin-left: -60%;
       margin-top:-20%;
@@ -40,7 +41,6 @@
     }
 
     .ms-gt-left {
-
       will-change: transform;
       position: relative;
       z-index: 0;
@@ -98,6 +98,7 @@
 // specific styles for expanded state  ------------------------------------------------------------------------------------------------
 .main-segment[data-state=collapsed] {
   .ms-gt-left { // out
+      filter: blur(4px) grayscale(0%);
       transition: opacity 1.5s .5s, filter .3s;
   }
   .ms-gt-right {

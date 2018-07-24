@@ -15,56 +15,11 @@
             {
                     "projID": 1,
                     "projType": "gallery",
-                    "projFolder": "test",
-
-                    "projHeadTitle": "Herksfasz!",
-                    "projHeadDesc": "Motion Dfafafagn",
-                    "projHeadTagHref": "instagram.com",
-                    "projBackgroundColorOrImage": 0,
-                    "projBackgroundColor": "#1A181B",
-                    "projBackgroundImage": "bg.jpg",
-
-                    "projThumbnailImages": [
-                      "thumb-01.jpg", "thumb-02.jpg"
-                    ],
-                    "projContent": [
-                      {"type":"image", "src": "01.jpg", "alt": "alttext"},
-                      {"type":"video", "src": "intro.mp4"},
-                      {"type":"text", "purpose": "headline", "text": "Branding der ARD Alpha Fernsehsendung RESPEKT", "paddings": [0,0]},
-                      {"type":"text", "purpose": "subline", "text": "Brand Design, Motion Design", "paddings": [0,0]},
-                      {"type":"image", "src": "02.jpg", "alt": "alttext"}
-                    ]
-            }, {
-                    "projID": 2,
-                    "projType": "gallery",
-                    "projFolder": "skate",
-
-                    "projHeadTitle": "Brabrabra!",
-                    "projHeadDesc": "Motion Design, Brand Design",
-                    "projHeadTagHref": "",
-                    "projBackgroundColorOrImage": 0,
-                    "projBackgroundColor": "#1A181B",
-                    "projBackgroundImage": "bg.jpg",
-
-                    "projThumbnailImages": [
-                      "thumb-01.jpg", "thumb-02.jpg"
-                    ],
-                    "projContent": [
-                      {"type":"image", "src": "01.jpg", "alt": "alttext"},
-                      {"type":"text", "purpose": "headline", "text": "Branding der ARD Alpha Fernsehsendung RESPEKT", "paddings": [0,0]},
-                      {"type":"text", "purpose": "subline", "text": "Brand Design, Motion Design", "paddings": [0,0]},
-                      {"type":"image", "src": "02.jpg", "alt": "alttext"}
-                    ]
-            },
-            {
-                    "projID": 3,
-                    "projType": "gallery",
-                    "projFolder": "schorsch",
+                    "projFolder": "respekt",
 
                     "projHeadTitle": "Respekt",
                     "projHeadDesc": "Motion Design, Brand Design",
                     "projHeadTagHref": "",
-                    "projBackgroundColorOrImage": 1,
                     "projBackgroundColor": "#12193a",
                     "projBackgroundImage": "bg.jpg",
 
@@ -75,7 +30,27 @@
                       {"type":"image", "src": "01.png", "alt": "alttext"},
                       {"type":"text", "style": "headline", "text": "Styleguide", "paddings": [0,0]},
                       {"type":"text", "style": "subline", "text": "ein ca. 40-seitiges Manual für Designer mit Angaben zu Typografie, Logo, Farbraum, Stilelementen, Einsatz von Realbildern, Videoverpackung, Motion Design etc.", "paddings": [0,0]}
+                    ]
+            },
+            {
+                    "projID": 2,
+                    "projType": "gallery",
+                    "projFolder": "socialnauten",
 
+                    "projHeadTitle": "Socialnauten",
+                    "projHeadDesc": "Motion Design, Brand Design",
+                    "projHeadTagHref": "",
+                    "projBackgroundColor": "#11091e",
+                    "projBackgroundImage": "bg.jpg",
+
+                    "projThumbnailImages": [
+                      "thumb-01.jpg", "thumb-02.jpg"
+                    ],
+                    "projContent": [
+                      {"type":"image", "src": "header.png", "alt": "alttext"},
+                                            {"type":"text", "style": "subline", "text": "Brand Design für Socialnauten, eine Agentur für Video Produktion und Social-Media-Strategie", "paddings": [40,40]},
+                      {"type":"image", "src": "mockup.gif", "alt": "alttext"},
+                      {"type":"image", "src": "tshirts.png", "alt": "alttext"}
                     ]
             }
         ]

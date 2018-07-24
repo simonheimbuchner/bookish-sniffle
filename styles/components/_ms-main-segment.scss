@@ -18,10 +18,11 @@ body[data-lightboxstate=expanded] .pagecontent{
     margin-bottom: 50vw;
   }
   @include s {
-    width: 100vw;
+    width: 95vw;
   }
 
     .ms-hr {
+      z-index: 1;
       @include l {
         transition: width 1s, opacity 1s;
         height: .2em;
