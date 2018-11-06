@@ -103,7 +103,7 @@ createClickEvent('lightboxBackBtn', "lightbox", function(target) {
     toggleState(document.querySelector('lightbox'), 'lightboxstate', 'expanded', 'collapsed')
 });
 
-
+/*
 var instance = basicScroll.create({
   elem: document.querySelector('.headercontent'),
   from: 'top-middle',
@@ -122,7 +122,7 @@ var instance = basicScroll.create({
 });
 
 instance.start()
-
+*/
 
 // parralax thumbs
 parralaxThumbEls = document.getElementsByClassName('ms-gt-left');

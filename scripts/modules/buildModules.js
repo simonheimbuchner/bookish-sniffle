@@ -16,7 +16,7 @@ define(['lib/getJSONFromFile',
       pageContents = output.pageContents;
 
     // header ---------------------------------------------------------------------------------------------------------
-          new headerObj(defaultProps.defaultHeaderImagePath, headerProps.headerSiteName, headerProps.headerBGImage, headerProps.headerContactIcon, headerProps.headerMyEmailAdress);
+          new headerObj(defaultProps.defaultHeaderImagePath, headerProps.headerSiteImgName, headerProps.headerSiteName, headerProps.headerBGImage, headerProps.headerContactIcon, headerProps.headerMyEmailAdress);
 
 
     // mainpage ---------------------------------------------------------------------------------------------------------

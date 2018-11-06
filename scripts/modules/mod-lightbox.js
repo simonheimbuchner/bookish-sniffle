@@ -4,6 +4,9 @@ function lightboxContents(projid, defaultProjPath, defaultBackgroundPath, projHe
     projGenerateImagesHTML = function() {
       output = "";
       for(k in projContent) {
+        if(projContent[k].type == "spacer") {
+          output += '<div class="spacer" style="height: ' + projContent[k].height + 'px"> </div>';
+        }
         if(projContent[k].type == "image") {
           output += '<img src="' + defaultProjPath + '/' + projFolder + '/' + projContent[k].src + '" alt="'+ projContent[k].alt +'">';
         }
@@ -11,8 +14,11 @@ function lightboxContents(projid, defaultProjPath, defaultBackgroundPath, projHe
           output += '<p data-style="'+ projContent[k].style +'" style="padding-top:' + projContent[k].paddings[0] +'px; padding-bottom:' + projContent[k].paddings[1] +'px" >'+ projContent[k].text +'</p>';
         }
         if (projContent[k].type == "video") {
+          if(projContent[k].format == "16x9")var dimensionStyle = "";
+          if(projContent[k].format == "9x16")var dimensionStyle = "width:auto;height:720px !important;";
+          if(projContent[k].format == "1x1")var dimensionStyle = "width:720px !important;height:720px !important;";
           // standard video
-          output += '<video class="video-js" controls preload="auto" width="1280" height="720"'+
+          output += '<video class="video-js" controls preload="auto" style='+dimensionStyle+' width="1280" height="720" '+
                     '  poster data-setup="{}">'+
                     '    <source src="'+ defaultProjPath + '/' + projFolder + '/' + projContent[k].src +'" type=\'video/mp4\'>'+
                     '    <p class="vjs-no-js">'+

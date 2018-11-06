@@ -6,7 +6,8 @@
             "defaultBackgroundPath": "bg"
       },
       "headerProps" : {
-            "headerSiteName" : "simon<br>heimbuchner",
+            "headerSiteName" : "",
+            "headerSiteImgName" : "title.png",
             "headerBGImage": "bg.jpg",
             "headerContactIcon": "contact.svg",
             "headerMyEmailAdress": "simonheimbuchner@gmail.com"
@@ -15,42 +16,105 @@
             {
                     "projID": 1,
                     "projType": "gallery",
-                    "projFolder": "respekt",
-
-                    "projHeadTitle": "Respekt",
-                    "projHeadDesc": "Motion Design, Brand Design",
-                    "projHeadTagHref": "",
-                    "projBackgroundColor": "#12193a",
-                    "projBackgroundImage": "bg.jpg",
-
-                    "projThumbnailImages": [
-                      "thumb-01.jpg", "thumb-02.jpg"
-                    ],
-                    "projContent": [
-                      {"type":"image", "src": "01.png", "alt": "alttext"},
-                      {"type":"text", "style": "headline", "text": "Styleguide", "paddings": [0,0]},
-                      {"type":"text", "style": "subline", "text": "ein ca. 40-seitiges Manual für Designer mit Angaben zu Typografie, Logo, Farbraum, Stilelementen, Einsatz von Realbildern, Videoverpackung, Motion Design etc.", "paddings": [0,0]}
-                    ]
-            },
-            {
-                    "projID": 2,
-                    "projType": "gallery",
                     "projFolder": "socialnauten",
 
                     "projHeadTitle": "Socialnauten",
                     "projHeadDesc": "Motion Design, Brand Design",
                     "projHeadTagHref": "",
-                    "projBackgroundColor": "#11091e",
+                    "projBackgroundColor": "#110521",
                     "projBackgroundImage": "bg.jpg",
 
                     "projThumbnailImages": [
                       "thumb-01.jpg", "thumb-02.jpg"
                     ],
                     "projContent": [
-                      {"type":"image", "src": "header.png", "alt": "alttext"},
-                                            {"type":"text", "style": "subline", "text": "Brand Design für Socialnauten, eine Agentur für Video Produktion und Social-Media-Strategie", "paddings": [40,40]},
-                      {"type":"image", "src": "mockup.gif", "alt": "alttext"},
+                      {"type":"gif", "src": "header.mp4"},
+                      {"type":"text", "style": "subline", "text": "Brand Design für Socialnauten, eine Agentur für Video Produktion und Social-Media-Strategie", "paddings": [40,40]},
+                      {"type":"image", "src": "mockup.png", "alt": "alttext"},
                       {"type":"image", "src": "tshirts.png", "alt": "alttext"}
+                    ]
+            },
+            {
+                    "projID": 2,
+                    "projType": "gallery",
+                    "projFolder": "bayern2-app",
+
+                    "projHeadTitle": "Bayern 2 App Trailer",
+                    "projHeadDesc": "Idee, Design, Motion Design",
+                    "projHeadTagHref": "",
+                    "projBackgroundColor": "#19181b",
+                    "projBackgroundImage": "",
+
+                    "projThumbnailImages": [
+                      "thumb-01.jpg", "thumb-02.jpg"
+                    ],
+                    "projContent": [
+                      {"type":"spacer", "height": 120},
+                      {"type":"image", "src": "die-bayern-2-app-header.jpg", "alt": ""},
+                      {"type":"text", "style": "subline", "text": "Dieser Film wurde für den Launch der Bayern 2 Podcast App in verschiedenen Formaten und Längen produziert. Während des Werbezeitraums lief er unter anderem auf Messen und U-Bahn Bildschirmen.", "paddings": [0,30]},
+                      {"type":"video", "format": "16x9", "src": "b2film.mov"},
+                      {"type":"text", "style": "subline", "text": "In Zusammenarbeit mit Max Hofstetter – <a href='https://www.max-hofstetter.de/'>max-hofstetter.de/</a>", "paddings": [40,0]}
+                    ]
+            },
+            {
+                    "projID": 3,
+                    "projType": "gallery",
+                    "projFolder": "respekt",
+
+                    "projHeadTitle": "Respekt",
+                    "projHeadDesc": "Brand Design, Motion Design",
+                    "projHeadTagHref": "",
+                    "projBackgroundColor": "#12193a",
+                    "projBackgroundImage": "",
+
+                    "projThumbnailImages": [
+                      "thumb-01.jpg", "thumb-02.jpg"
+                    ],
+                    "projContent": [
+                      {"type":"gif", "src": "opener-7.mp4"},
+                      {"type":"text", "style": "headline", "text": "RESPEKT ist eine Sendereihe des Fernsehsenders <a href='https://www.br.de/fernsehen/ard-alpha/index.html'>ARD alpha</a>.", "paddings": [20,20]},
+                      {"type":"image", "src": "banner.jpg", "alt": "alttext"},
+                      {"type":"text", "style": "subline", "text": "In rund 30-minütigen Folgen werden Jugendlichen demokratische und gesellschaftliche Grundwerte nahegebracht. Ein Presenter spricht mit Leuten auf der Straße, führt kontroverse Gespräche und hakt nach. Grafisch animierte Erklärstücke ergänzen den Presenter und erklären komplexe Themenstände.", "paddings": [4,0]},
+
+                      {"type":"spacer", "height": 120},
+                      {"type":"text", "style": "headline", "text": "Website Branding auf www.br.de <a href='https://www.br.de/extra/respekt/demokratie-werte-einfach-erklaert-100.html'>(Link)</a>", "paddings": [0,0]},
+                      {"type":"image", "src": "website.jpg", "alt": "alttext"},
+
+
+                      {"type":"spacer", "height": 50},
+
+                      {"type":"text", "style": "headline", "text": "Erklärstück-Beispiel: Zahlen & Fakten zu Europa", "paddings": [20,0]},
+                      {"type":"video", "format": "16x9", "src": "zuf europa.mp4"},
+                      {"type":"text", "style": "subline", "text": "Für diese Rubrik wurde ein komplexes Baukastensystem entworfen, das die Produktionszeit (der bildlichen Ebene) von ursprünglich 8 Arbeitstagen auf 4 Arbeitstage verringert.", "paddings": [20,40]},
+
+                      {"type":"text", "style": "headline", "text": "Styleguide für Motion Designer", "paddings": [40,0]},
+                      {"type":"image", "src": "styleguide-1.jpg", "alt": "alttext"},
+                      {"type":"text", "style": "subline", "text": "Die Produktion der Erklärstücke wird von mehreren Kollegen umgesetzt. Dafür wurde ein ca. 40-seitiges Manual aufgesetzt, mit Angaben zu Typografie, Logo, Farbräumen, Stilelementen, Einsatz von Realbildern, Videoverpackung, Motion Design etc.", "paddings": [0,0]},
+                      {"type":"image", "src": "styleguide.jpg", "alt": "alttext"}
+                    ]
+            },
+            {
+                    "projID": 4,
+                    "projType": "gallery",
+                    "projFolder": "icheisner",
+
+                    "projHeadTitle": "Ich, Eisner",
+                    "projHeadDesc": "Motion Design, Sound Design",
+                    "projHeadTagHref": "",
+                    "projBackgroundColor": "#111518",
+                    "projBackgroundImage": "bg.jpg",
+
+                    "projThumbnailImages": [
+                      "thumb-01.jpg", "thumb-02.jpg"
+                    ],
+                    "projContent": [
+                        {"type":"image", "src": "eisner.jpg", "alt": "alttext"},
+                        {"type":"spacer", "height": 50},
+                        {"type":"text", "style": "subline", "text": "Kurt Eisner höchstpersönlich, Anführer der Revolution des Jahres 1918 und erster Ministerpräsident Bayerns, schickt uns Nachrichten direkt aufs Handy – und erzählt in Echtzeit, was vor 100 Jahren geschah.", "paddings": [2,0]},
+                        {"type":"spacer", "height": 50},
+                        {"type":"text", "style": "subline", "text": "Trailer zum Projekt:", "paddings": [2,0]},
+                        {"type":"video", "format": "9x16", "src": "video.mp4"},
+                        {"type":"text", "style": "subline", "text": "Website: <a href='  https://www.br.de/extra/webspecials/kurt-eisner-revolution-bayern-whatsapp-100.html'>(Link)</a>", "paddings": [2,0]}
                     ]
             }
         ]
