@@ -1,0 +1,106 @@
+{
+      "defaults": {
+            "imgPath": "resources/img",
+            "mail": "info@sunspiration.de"
+      },
+      "navigation" : [
+            {"navPoint": "musik", "linksToOnPage": "#musik", "htmlPage": "index.html"},
+            {"navPoint": "band", "linksToOnPage": "#band", "htmlPage": "index.html"},
+            {"navPoint": "kontakt", "linksToOnPage": "#kontakt", "htmlPage": "index.html"},
+            {"navPoint": "impressum", "linksToOnPage": "impressum.html", "htmlPage": "impressum.html"}
+      ],
+      "pageContents": [
+          {
+                "navPoint": "header",
+                "navPointVisible": false,
+                "backgroundImage": "bg-head.jpg",
+                "contents": [
+                      [
+                            {
+                              "contentType": "text"
+                            },
+                            [
+                                {
+                                  "type": "h1Invisible",
+                                  "text": "Sunspiration"
+                                }
+                            ]
+                      ]
+                ]
+          },
+          {
+                "navPoint": "musik",
+                "navPointVisible": true,
+                "backgroundImage": "bg-musik.jpg",
+                "contents":
+                [
+                      [
+                            {
+                              "contentType": "musicEmbeds"
+                            },
+                            [
+                                  {
+                                    "headline": "auf Spotify",
+                                    "content": "<iframe src='https://open.spotify.com/embed?uri=spotify:album:5VJhkkaFnxaplOlTwgsNAh' width='100%' height='400' frameborder='0' allowtransparency='true'></iframe>"
+                                  },
+                                  {
+                                    "headline": "auf Soundcloud",
+                                    "content": "<iframe width='100%' height='400' scrolling='no' frameborder='no' allow='autoplay' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/323715646&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true'></iframe>"
+                                  }
+                            ]
+                      ]
+                ]
+
+          },
+          {
+                "navPoint": "band",
+                "navPointVisible": true,
+                "backgroundImage": "bg-band.jpg",
+                "contents":
+                [
+                      [
+                            {
+                              "contentType": "text"
+                            },
+                            [
+                                {
+                                  "type": "runningText",
+                                  "text": "Sunspiration ist ein Band-Trio aus München. Von Schultagen an befreundet, machen wir seit einigen Jahren zusammen Musik. Mittlerweile haben wir schon viele Konzerte, Radioauftritte und zwei Alben im Gepäck dabei. Unser Markenzeichen ist zweistimmiger Gesang, der die Kurven unserer Songs steuert. Dazu gesellen sich Gitarrensoli, elektronische Klänge auf den Tasten und eingängige Beats am Schlagzeug. Hör einfach mal rein, lass dich mitnehmen und wenn dir gefällt, was du fühlst, komm zu unseren Konzerten oder hol dir unsere CD, indem du uns über <a href='#kontakt'>kontakt</a> schreibst."
+                                }
+                            ]
+                      ],
+                      [
+                            {
+                              "contentType": "videoEmbed"
+                            },
+                            [
+                                {
+                                  "title": "Sunspiration – Three Men (Live Session)",
+                                  "src": "https://www.youtube.com/embed/7WpuntNfbGg"
+                                }
+                            ]
+                      ]
+                ]
+          },
+          {
+                "navPoint": "kontakt",
+                "navPointVisible": true,
+                "backgroundImage": "bg-kontakt.jpg",
+                "contents":
+                [
+                      [
+                            {
+                              "contentType": "form"
+                            },
+                            [
+                                {"tag": "input", "type": "text", "name": "Name", "value": false, "placeholder": "Name", "required": true},
+                                {"tag": "input", "type": "email", "name": "_replyto", "value": false, "placeholder": "E-Mail", "required": true},
+                                {"tag": "input", "type": "text", "name": "Betreff", "value": false, "placeholder": "Betreff", "required": true},
+                                {"tag": "textarea", "type": "text", "name": "Nachricht", "value": false, "placeholder": "Nachricht", "required": true},
+                                {"tag": "button", "type": "submit", "name": "", "value": "Abschicken", "placeholder": false, "required": false}
+                            ]
+                      ]
+                ]
+          }
+      ]
+}
